@@ -22,3 +22,6 @@ One linux machine (instructions assume centos 7, execute with root priviledges)
 	- add docker plugins to jenkins (docker plugin / docker API plugin)
 	- usermod -a -G docker jenkins
 	- systemctl restart jenkins
+- Create a new job in jenkins:
+	- multibranch pipeline
+	- git url : https://github.com/madm1c/pipedock.git
