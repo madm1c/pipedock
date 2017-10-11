@@ -9,9 +9,9 @@ One linux machine (instructions assume centos 7, execute with root priviledges)
 	- yum install docker-ce
     - Don't forget to add your user to the docker group to allow that user access to docker: usermod -aG docker <userid>
 - Add jenkins
-	# Although I would have preferred to use a containerized jenkins, 
-	# access to docker on the host is needed for jenkins, so for now
-	# I have used the rpm distribution
+	Although I would have preferred to use a containerized jenkins, 
+	access to docker on the host is needed for jenkins, so for now
+	I have used the rpm distribution
 	- yum-config-manager --add-repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 	- rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 	- yum install java jenkins
@@ -20,4 +20,5 @@ One linux machine (instructions assume centos 7, execute with root priviledges)
 	- NOTE: config file will be /etc/sysconfig/jenkins
 	- NOTE: more info on https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions
 	- add docker plugins to jenkins (docker plugin / docker API plugin)
-	- add jenkins to the docker group, then restart jenkins.
+	- usermod -a -G docker jenkins
+	- systemctl restart jenkins
