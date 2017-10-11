@@ -1,7 +1,7 @@
 pipeline {
 	agent none
 	stages {
-		stage('cpp-build) {
+		stage('cpp-build') {
 			agent {
 				dockerfile { dir cpp-build }
 			}
@@ -9,7 +9,7 @@ pipeline {
 				sh 'gcc --version'
 			}
 		}
-		stage('java-build) {
+		stage('java-build') {
 			agent {
 				dockerfile { dir java-build }
 			}
