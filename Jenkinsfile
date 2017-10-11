@@ -1,13 +1,3 @@
-# test pipeline
-
-# using a docker image provided externally
-# docker.image('some image').inside {
-#   stage("do stuff") {
-#     sh "do stuff"
-#   }
-#
-# }
-
 pipeline {
 	agent none
 	stages {
@@ -29,4 +19,14 @@ pipeline {
 		}
 	}
 }
+
+# test pipeline
+
+# using a docker image provided externally
+# docker.image('some image').inside {
+#   stage("do stuff") {
+#     sh "do stuff"
+#   }
+#
+# }
 
