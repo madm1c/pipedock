@@ -20,13 +20,13 @@ pipeline {
 	}
 }
 
-# test pipeline
+// test pipeline
 
-# using a docker image provided externally
-# docker.image('some image').inside {
-#   stage("do stuff") {
-#     sh "do stuff"
-#   }
-#
-# }
+// using a docker image provided externally
+// docker.image('some image').inside {
+//   stage("do stuff") {
+//     sh "do stuff"
+//   }
+//
+// }
 
